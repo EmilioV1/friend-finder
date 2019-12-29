@@ -146,7 +146,7 @@
             <br>
             <br>
 
-            <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle"
+            <button type="button" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle"
                     aria-hidden="true"></i>Submit</button>
 
         </form>
@@ -183,8 +183,7 @@
     </div>
 
     <!--Bootstrap JS-->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js">
     </script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
@@ -199,17 +198,18 @@
             function validateForm() {
                 var isValid = true;
                 $(".form-control").each(function () {
-                    console.log("Check!")
+
                     if ($(this).val() === "") {
                         isValid = false;
                     }
                 });
-
                 return isValid;
             }
 
             // If all fields are filled
             if (validateForm()) {
+                alert("I have been activated.")
+                alert("Top" + userData);
                 // Create an object for user's data
                 var userData = {
 
@@ -228,13 +228,14 @@
                         $("#q10").val(),
                     ]
                 };
-
+                alert(userData);
                 var currentURL = window.location.origin;
 
                 $.post(currentURL + "/api/friends", userData, function (data) {
                     alert("working!");
                 });
             }
+
         })
     </script>
 </body>
