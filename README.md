@@ -25,5 +25,5 @@ You can also click on the "API Friends List" button towards the bottom of the pa
 ### App View
 ![friend](https://user-images.githubusercontent.com/33468221/71553058-37350200-29bd-11ea-8d50-4aed47734e59.png)
 
-## Author(s)
+## Author
 [Emilio Valladares](https://github.com/nolimits1/)
