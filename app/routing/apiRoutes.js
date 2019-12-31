@@ -41,7 +41,7 @@ module.exports = function (app) {
                     // Resets best match to nre friend
                     bestMatch.name = friends[i].name;
                     bestMatch.photo = friends[i].photo;
-                    bestMatch.friendDifference = friends[i].friendDifference;
+                    bestMatch.friendDifference = totalDifference;
 
                 }
             }
